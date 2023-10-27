@@ -17,13 +17,38 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="60"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             
         </Grid.RowDefinitions>
-        <TextBlock Grid.ColumnSpan="5" Background="White" FontSize="60" FontStyle="Oblique" FontWeight="Bold" >Diseño de interfaces </TextBlock>
+        <TextBlock Grid.ColumnSpan="5" Background="White" FontSize="60" FontStyle="Oblique" FontWeight="Bold" Foreground="Coral" >Diseño de interfaces </TextBlock>
         <TextBox Grid.Row="1" Grid.ColumnSpan="5" Background="Beige" AcceptsReturn="True" TextWrapping="Wrap"  SpellCheck.IsEnabled="True" FontSize="30" FontWeight="Regular" Text="Hola Alberto, como estass (como se puede ver tengo el spell check activado )"></TextBox>
-        
+        <ComboBox Grid.Row="2" Grid.ColumnSpan="5">
+            
+            <ComboBoxItem Background="CadetBlue">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="imagenes/black1.jpg" Width="60" Height="40"/>
+                    <TextBlock Foreground="Red">Black Panther</TextBlock>
+                </StackPanel>
+            </ComboBoxItem>
+            
+            <ComboBoxItem Background="BurlyWood">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="imagenes/miles2.png" Width="60" Height="40"/>
+                    <TextBlock Foreground="Green">Miles Morales</TextBlock>
+                </StackPanel>
+               
+            </ComboBoxItem>
+            
+            <ComboBoxItem Background="Chocolate">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="imagenes/black2.jpg" Width="60" Height="40"/>
+                    <TextBlock Foreground="BlanchedAlmond">Miles Morales</TextBlock>
+                </StackPanel>
+                
+            </ComboBoxItem>
+            
+        </ComboBox>
     </Grid>
 </Window>
