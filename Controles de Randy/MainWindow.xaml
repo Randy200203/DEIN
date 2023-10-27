@@ -22,7 +22,8 @@
             <RowDefinition Height="*"/>
             
         </Grid.RowDefinitions>
-        <TextBox Text="Nombre:" Grid.Row="0"> </TextBox>
-        <TextBox Text="Apellido:" Grid.Row="1"></TextBox>
+        <TextBlock Grid.ColumnSpan="5" Background="White" FontSize="60" FontStyle="Oblique" FontWeight="Bold" >Diseño de interfaces </TextBlock>
+        <TextBox Grid.Row="1" Grid.ColumnSpan="5" Background="Beige" AcceptsReturn="True" TextWrapping="Wrap"  SpellCheck.IsEnabled="True" FontSize="30" FontWeight="Regular" Text="Hola Alberto, como estass (como se puede ver tengo el spell check activado )"></TextBox>
+        
     </Grid>
 </Window>
