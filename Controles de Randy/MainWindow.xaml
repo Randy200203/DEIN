@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Controles_de_Randy"
         mc:Ignorable="d"
-        Title="MainWindow De Randy" Height="450" Width="800" Background="Aqua">
+        Title="MainWindow" Height="450" Width="800" Background="Aqua">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
