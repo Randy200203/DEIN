@@ -10,21 +10,30 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Estilos_de_Randy_Achana
 {
     /// <summary>
-    /// Lógica de interacción para MainWindow.xaml
+    /// Lógica de interacción para Login.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Login : Window
     {
-        public MainWindow()
+        public Login()
         {
             InitializeComponent();
         }
         private void Button_MainMenu(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_LocateUs(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_ContactUs(object sender, RoutedEventArgs e)
         {
 
         }
@@ -38,32 +47,5 @@ namespace Estilos_de_Randy_Achana
         {
 
         }
-
-        private void Button_ContactUs(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_LocateUs(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_tractors(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_Watering(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_Transportation(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-       
     }
 }
