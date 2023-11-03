@@ -10,26 +10,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Navegacion_de_Randy
 {
     /// <summary>
-    /// Lógica de interacción para Window1.xaml
+    /// Interaction logic for Page1.xaml
     /// </summary>
-    public partial class Window1 : Window
+    public partial class Page1 : Page
     {
-        public Window1()
+        public Page1()
         {
             InitializeComponent();
-        }
-
-        private void Mainwindow(object sender, RoutedEventArgs e)
-        {
-            MainWindow AbrirMainWindow = new MainWindow();
-            this.Close();
-            AbrirMainWindow.Show();
-
         }
     }
 }

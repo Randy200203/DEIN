@@ -27,17 +27,22 @@ namespace Navegacion_de_Randy
 
         private void Boton_Window1(object sender, RoutedEventArgs e)
         {
-
+            Window1 AbrirVentana = new Window1();
+            this.Close();
+            AbrirVentana.Show();
         }
 
         private void Boton_Window2(object sender, RoutedEventArgs e)
         {
+            Window2 AbrirVentana = new Window2();
+            this.Close();
+            AbrirVentana.Show();
 
         }
 
         private void Boton_Salir(object sender, RoutedEventArgs e)
         {
-
+            System.Windows.Application.Current.Shutdown();
         }
     }
 }

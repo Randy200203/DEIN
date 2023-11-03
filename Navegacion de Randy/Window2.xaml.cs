@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace Navegacion_de_Randy
 {
     /// <summary>
-    /// Lógica de interacción para Window1.xaml
+    /// Interaction logic for Window2.xaml
     /// </summary>
-    public partial class Window1 : Window
+    public partial class Window2 : Window
     {
-        public Window1()
+        public Window2()
         {
             InitializeComponent();
         }
@@ -30,6 +30,12 @@ namespace Navegacion_de_Randy
             this.Close();
             AbrirMainWindow.Show();
 
+
+        }
+
+        private void Bóton2_AbrirPágina(object sender, RoutedEventArgs e)
+        {
+            MyFrame.NavigationService.Navigate(new Page1());
         }
     }
 }
