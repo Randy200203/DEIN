@@ -24,5 +24,25 @@ namespace Estilos_de_Randy_Achana
         {
             InitializeComponent();
         }
+
+        private void Button_Sign(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Login(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_ContactUs(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_LocateUs(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -5,8 +5,108 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Estilos_de_Randy_Achana"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="MainWindow" Height="550" Width="800">
+    <Border CornerRadius="20">
+        <Border CornerRadius="10" BorderThickness="5" Opacity="0.95">
+            <Border.BorderBrush>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.BorderBrush>
+
+            <Border.Background>
+                <LinearGradientBrush StartPoint="0,2" EndPoint="1,0">
+                    <GradientStop Color="LightGreen" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Image HorizontalAlignment="Left" 
+                      Source="C:\Users\randy\OneDrive\Escritorio\INTERFACES\DEIN\DEIN\Estilos de Randy Achana\Images\OK.png" Grid.RowSpan="2" Grid.ColumnSpan="2" Stretch="Fill"/>
+                <TextBlock Grid.Row="0" Grid.Column="2" 
+                            Grid.ColumnSpan="2"
+                            Background="Transparent"
+                            FontWeight="DemiBold"
+                            FontFamily="Global User Interface"
+                            FontSize="30"
+                            TextAlignment="Center"
+                            VerticalAlignment="Center"
+                            Text="Achana Industries"  
+                />  
+                <Button BorderBrush="#F6A342" Name="Login_Button" Grid.Row="0" Grid.Column="4" 
+                        Content="Login" 
+                        Height="50" Width="110"
+                        Background="Transparent" Foreground="Black" 
+                        FontWeight="ExtraBold" Cursor="Hand" Click="Button_Login">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="1.5" CornerRadius="10">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <Button BorderBrush="#F6A342" Name="Sign_Button" Grid.Row="0" Grid.Column="5" 
+                        Content="Sign" 
+                        Height="50" Width="110"
+                        Background="Transparent" Foreground="Black" 
+                        FontWeight="ExtraBold" Cursor="Hand" Click="Button_Sign">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="1.5" CornerRadius="10">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <Button Name="ContactUs_Button" Grid.Row="6" Grid.Column="4" 
+                        Content="Contact Us" 
+                        Height="50" Width="110"
+                        Foreground="White" 
+                        FontWeight="ExtraBold" Cursor="Hand" Click="Button_ContactUs">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Background="Black" BorderBrush="#F6A342" BorderThickness="3" >
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <Button  Name="LocateUs_Button" Grid.Row="6" Grid.Column="5" 
+                        Content="Locate Us" 
+                        Height="50" Width="110"
+                        Foreground="White" 
+                        FontWeight="ExtraBold" Cursor="Hand" Click="Button_LocateUs">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Background="Black" BorderBrush="#F6A342" BorderThickness="3" >
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+
+
+
+
+            </Grid>
+        </Border>
+    </Border>
+
 </Window>
