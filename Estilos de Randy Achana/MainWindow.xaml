@@ -38,7 +38,7 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <Image HorizontalAlignment="Left" 
-                      Source="C:\Users\randy\OneDrive\Escritorio\INTERFACES\DEIN\DEIN\Estilos de Randy Achana\Images\OK.png" Grid.RowSpan="2" Grid.ColumnSpan="2" Stretch="Fill"/>
+                      Source="Images\OK.png" Grid.RowSpan="2" Grid.ColumnSpan="2" Stretch="Fill"/>
                 <TextBlock Grid.Row="0" Grid.Column="2" 
                             Grid.ColumnSpan="2"
                             Background="Transparent"
