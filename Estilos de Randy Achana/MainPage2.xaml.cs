@@ -10,48 +10,25 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Estilos_de_Randy_Achana
 {
     /// <summary>
-    /// Lógica de interacción para MainWindow.xaml
+    /// Interaction logic for MainPage2.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainPage2 : Window
     {
-        public MainWindow()
+        public MainPage2()
         {
             InitializeComponent();
         }
+
         private void Button_MainMenu(object sender, RoutedEventArgs e)
         {
-            MainWindow AbrirVentanaMain = new MainWindow();
+            MainPage2 AbrirVentanaMain2 = new MainPage2();
             this.Close();
-            AbrirVentanaMain.Show();
-        }
-
-        private void Button_Sign(object sender, RoutedEventArgs e)
-        {
-            Sign_Up AbrirVentanaSignUp = new Sign_Up();
-            this.Close();
-            AbrirVentanaSignUp.Show();
-        }
-
-        private void Button_Login(object sender, RoutedEventArgs e)
-        {
-            Login AbrirVentanaLogin = new Login();
-            this.Close();
-            AbrirVentanaLogin.Show();
-        }
-
-        private void Button_ContactUs(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_LocateUs(object sender, RoutedEventArgs e)
-        {
+            AbrirVentanaMain2.Show();
 
         }
 
@@ -66,6 +43,28 @@ namespace Estilos_de_Randy_Achana
         }
 
         private void Button_Transportation(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+      
+
+        private void Button_LocateUs(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Profile(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_favourite(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_ContactUs(object sender, RoutedEventArgs e)
         {
 
         }

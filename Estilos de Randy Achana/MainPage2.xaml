@@ -1,11 +1,11 @@
-﻿<Window x:Class="Estilos_de_Randy_Achana.MainWindow"
+﻿<Window x:Class="Estilos_de_Randy_Achana.MainPage2"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Estilos_de_Randy_Achana"
         mc:Ignorable="d"
-        Title="MainWindow" Height="550" Width="800">
+        Title="MainPage2" Height="550" Width="800">
     <Border CornerRadius="20">
         <Border CornerRadius="10" BorderThickness="5" Opacity="0.95">
             <Border.BorderBrush>
@@ -56,34 +56,34 @@
                     </Button.Template>
                 </Button>
 
-                <Button BorderBrush="#F6A342" Name="Login_Button" Grid.RowSpan="2" Grid.Column="4"
-                        Content="Login" 
-                        Height="50" Width="110"
-                        Background="Transparent" Foreground="Black" 
-                        FontWeight="ExtraBold" Cursor="Hand" Click="Button_Login">
+                <Image Source="Images\profile.png" Grid.Row="0" Grid.Column="5" Grid.RowSpan="2" VerticalAlignment="Top"></Image>
+                <Button Grid.Column="5" Grid.Row="1" 
+                        VerticalAlignment="Bottom" Margin="10" 
+                        Height="30" Name="Profile_button" 
+                        Content="Profile" Cursor="Hand" Click="Button_Profile">
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
-                            <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="1.5" CornerRadius="10">
+                            <Border Background="Transparent" BorderBrush="#F6A342" BorderThickness="3" >
                                 <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
                             </Border>
                         </ControlTemplate>
                     </Button.Template>
                 </Button>
 
-                <Button BorderBrush="#F6A342" Name="Sign_Button" Grid.RowSpan="2" Grid.Column="5" 
-                        Content="Sign Up" 
-                        Height="50" Width="110"
-                        Background="Transparent" Foreground="Black" 
-                        FontWeight="ExtraBold" Cursor="Hand" Click="Button_Sign">
+                <Image Source="Images\favourite.png" Grid.Row="0" Grid.Column="4" Grid.RowSpan="2" VerticalAlignment="Center" Height="50"></Image>
+                <Button Grid.Column="4" Grid.Row="1" 
+                        VerticalAlignment="Bottom" Margin="10" 
+                        Height="30" Name="Favourite_button" 
+                        Content="Favourite" Cursor="Hand" Click="Button_favourite">
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
-                            <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="1.5" CornerRadius="10">
+                            <Border Background="Transparent" BorderBrush="#F6A342" BorderThickness="3" >
                                 <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
                             </Border>
                         </ControlTemplate>
                     </Button.Template>
                 </Button>
-
+                
                 <Button Name="ContactUs_Button" Grid.Row="6" Grid.Column="4" 
                         Content="Contact Us" 
                         Height="50" Width="110"
@@ -161,12 +161,12 @@
                 <TextBlock Grid.Row="3" Grid.Column="2" Grid.RowSpan="2" Grid.ColumnSpan="4"
                            Text="Kubota L Series tractors are compact and utility tractors used in agriculture and landscaping.
                            They come in a range of sizes and horsepower options, making them suitable for various applications."
-                           FontWeight="Black" FontSize="20" TextWrapping="Wrap">
+                           FontWeight="Black" FontSize="20" TextWrapping="Wrap"></TextBlock>
 
-                </TextBlock>
 
-                <Button Grid.Column="0" Grid.Row="6" 
-                        Margin="10,42.2,70.2,0.6" Content="Log Out"
+
+                <Button Grid.Column="0" Grid.Row="6" VerticalAlignment="Bottom" Height="30" 
+                        Margin="10,0,70,0" Content="Log Out"
                         Cursor="Hand" Click="Button_LogOut">
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
@@ -176,10 +176,6 @@
                         </ControlTemplate>
                     </Button.Template>
                 </Button>
-
-
-
-
 
             </Grid>
         </Border>

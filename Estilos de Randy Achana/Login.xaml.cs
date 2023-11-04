@@ -25,7 +25,9 @@ namespace Estilos_de_Randy_Achana
         }
         private void Button_MainMenu(object sender, RoutedEventArgs e)
         {
-
+            MainWindow AbrirVentanaMain = new MainWindow();
+            this.Close();
+            AbrirVentanaMain.Show();
         }
 
         private void Button_LocateUs(object sender, RoutedEventArgs e)
@@ -40,12 +42,23 @@ namespace Estilos_de_Randy_Achana
 
         private void Button_Sign(object sender, RoutedEventArgs e)
         {
-
+            Sign_Up AbrirVentanaSign = new Sign_Up();
+            this.Close();
+            AbrirVentanaSign.Show();
         }
 
         private void Button_Login(object sender, RoutedEventArgs e)
         {
+            MainPage2 AbrirVentanMain2 = new MainPage2();
+            this.Close();
+            AbrirVentanMain2.Show();
 
+
+        }
+
+        private void Button_LogOut(object sender, RoutedEventArgs e)
+        {
+            System.Windows.Application.Current.Shutdown();
         }
     }
 }
