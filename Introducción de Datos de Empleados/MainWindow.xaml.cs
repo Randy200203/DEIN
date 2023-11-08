@@ -24,5 +24,9 @@ namespace Introducción_de_Datos_de_Empleados
         {
             InitializeComponent();
         }
+ 
+
+
+
     }
 }

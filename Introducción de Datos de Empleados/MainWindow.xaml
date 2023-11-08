@@ -12,33 +12,42 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="27*"/>
+            <RowDefinition Height="27*"/>
+            <RowDefinition Height="27*"/>
+            <RowDefinition Height="27*"/>
+            <RowDefinition Height="27*"/>
+            <RowDefinition Height="27*"/>
+            <RowDefinition Height="27*"/>
             <RowDefinition Height="50"/>
             <RowDefinition Height="60"/>
             <RowDefinition Height="50"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="27*"/>
+            <RowDefinition Height="27*"/>
+            <RowDefinition Height="27*"/>
+            <RowDefinition Height="15"/>
+            <RowDefinition Height="27*"/>
+            <RowDefinition Height="27*"/>
+            <RowDefinition Height="27*"/>
+            <RowDefinition Height="27*"/>
+            <RowDefinition Height="27*"/>
+            <RowDefinition Height="27*"/>
+            <RowDefinition Height="46*"/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="27*"/>
+            <RowDefinition Height="27*"/>
+            <RowDefinition Height="27*"/>
+            <RowDefinition Height="27*"/>
         </Grid.RowDefinitions>
         <TextBlock Text="Introducción de Datos de Empleados" 
                    Grid.Row="0" Grid.ColumnSpan="2" 
                    VerticalAlignment="Center" 
-                   HorizontalAlignment="Center">
+                   HorizontalAlignment="Center" Height="16" Margin="298,6,298,5" Width="196">
         </TextBlock>
         <TextBlock Text="Nombre*  " Background="Transparent" 
                    Grid.Row="1" 
                    VerticalAlignment="Center" 
-                   Margin="10,6,326,6">
+                   Margin="10,5,326,6" Height="16">
         </TextBlock>
         <TextBox Margin="70,1,320,1" 
                  Grid.Row ="1" 
@@ -48,7 +57,7 @@
         <TextBlock Text="Apellidos " Background="Transparent" 
                    Grid.Row="2" 
                    VerticalAlignment="Center" 
-                   Margin="10,6,326,6">
+                   Margin="10,6,326,5" Height="16">
         </TextBlock>
         <TextBox Margin="70,1,320,1" 
                  Grid.Row ="2" 
@@ -58,7 +67,7 @@
         <TextBlock Text="Email* " Background="Transparent" 
                    Grid.Row="3" 
                    VerticalAlignment="Center" 
-                   Margin="10,6,326,6">
+                   Margin="10,5,326,6" Height="16">
         </TextBlock>
         <TextBox Margin="70,1,320,1" 
                  Grid.Row ="3" 
@@ -68,17 +77,15 @@
         <TextBlock Text="Teléfono " Background="Transparent" 
                    Grid.Row="4" 
                    VerticalAlignment="Center" 
-                   Margin="10,6,326,6">
+                   Margin="10,6,326,5" Height="16">
         </TextBlock>
-        <TextBox Margin="70,1,500,1" 
+        <TextBox Margin="70,1,104,1" 
                  Grid.Row ="4" 
-                 Grid.Column="0" 
-                 Grid.ColumnSpan="2">
-        </TextBox>
+                 Grid.Column="0"/>
         <TextBlock Text="Fecha de nacimiento" Background="Transparent" 
                    Grid.Row="5"
                    VerticalAlignment="Center" 
-                   Margin="10,6,270,6">
+                   Margin="10,5,270,6" Height="16">
         </TextBlock>
         <DatePicker Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2"
                     Name="dp1" 
@@ -88,7 +95,7 @@
         <TextBlock Text="DNI " Background="Transparent" 
                    Grid.Row="6" 
                    VerticalAlignment="Center" 
-                   Margin="10,6,326,6">
+                   Margin="10,6,326,5" Height="16">
         </TextBlock>
         <TextBox Margin="50,1,320,1" 
                  Grid.Row ="6" 
@@ -105,16 +112,72 @@
                 Grid.Row="8" 
                 Margin="120,5,150,5">
         </Button>
-        <StackPanel Grid.Row="11" Orientation="Horizontal">
-            <TextBlock Grid.Row="11" Text="Domicilio"  Width="50" ></TextBlock>
-            <StackPanel Margin="0,10,0,10" Height="130" Orientation="Vertical">
+        <StackPanel Grid.RowSpan="6" Grid.ColumnSpan="2" Grid.Row="10"  Orientation="Horizontal">
+            <TextBlock Grid.Row="10"  Text="Domicilio"  Width="50" ></TextBlock>
+            <StackPanel Orientation="Vertical" Margin="0,0,0,29">
                 <TextBox Width="350" Margin="10,0,0,5" Text="Direccion"></TextBox>
-                <TextBox Width="350" Margin="10,0,0,5" Text="Ciudad"></TextBox>
+                <TextBox  Width="350" Margin="10,0,0,5" Text="Ciudad"></TextBox>
                 <TextBox Width="350" Margin="10,0,0,5" Text="Provincia"></TextBox>
                 <TextBox Width="350" Margin="10,0,0,5" Text="Codigo Postal"></TextBox>
                 <TextBox Width="350" Margin="10,0,0,5" Text="Pais"></TextBox>
             </StackPanel>
+            <Image Source="Imagenes/company.jpg" Width="162" Margin="0,0,0,47"/>
         </StackPanel>
+
+        <TextBlock Text="Enlace a red social  " Background="Transparent" 
+                   Grid.Row="15" 
+                   VerticalAlignment="Center" 
+                   Margin="10,6,280,5" Height="16">
+        </TextBlock>
+        <TextBox Margin="130,1,100,1" 
+                 Grid.Row ="15" 
+                 Grid.Column="0" 
+                 Grid.ColumnSpan="2">
+        </TextBox>
+        <TextBlock Text="Rol actual " Background="Transparent" 
+                   Grid.Row="16" 
+                   VerticalAlignment="Center" 
+                   Margin="10,5,325,6" Height="16">
+        </TextBlock>
+        <ComboBox Background="Transparent" Grid.Row="16" Grid.ColumnSpan="2"  Grid.Column="0" Margin="130,1,320,1">
+
+            <ComboBoxItem >
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock >Desarrollador</TextBlock>
+                </StackPanel>
+            </ComboBoxItem>
+
+            <ComboBoxItem >
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock>Analista</TextBlock>
+                </StackPanel>
+
+            </ComboBoxItem>
+
+        </ComboBox>
+
+        <TextBlock Text="Rol actual " Background="Transparent" 
+                   Grid.Row="17" 
+                   VerticalAlignment="Center" 
+                   Margin="10,6,325,5" Height="16">
+        </TextBlock>
+        <TextBox Margin="10,1,10,1" 
+                 Grid.Row ="18" 
+                 Grid.Column="0" 
+                 Grid.ColumnSpan="2"
+                 Grid.RowSpan="2" TextWrapping="Wrap">
+        </TextBox>
+        <Button Content="Guadar" 
+                Grid.Column="0" 
+                Grid.Row="20" 
+                Margin="270,5,10,5">
+        </Button>
+        <Button Content="Cancelar" 
+                Grid.Column="1" 
+                Grid.Row="20" 
+                Margin="10,5,270,5">
+        </Button>
+
     </Grid>
 
 </Window>
