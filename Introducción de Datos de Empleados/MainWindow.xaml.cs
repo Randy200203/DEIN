@@ -1,5 +1,6 @@
 ﻿using Microsoft.Win32;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Windows;
@@ -19,9 +20,13 @@ namespace Introducción_de_Datos_de_Empleados
     /// </summary>
     public partial class MainWindow : Window
     {
+        private IEnumerable employees;
+
         public MainWindow()
         {
             InitializeComponent();
+            employees = new ObservableCollection<Employee>();
+            datagrid.ItemsSource = employees;
         }
 
         private void Guardar_Click(object sender, RoutedEventArgs e)
@@ -46,7 +51,7 @@ namespace Introducción_de_Datos_de_Empleados
             {
                 Employee nuevoEmpleado = new Employee(nombreTextBox.Text, apellidosTextBox.Text, emailTextBox.Text, telefonoTextBox.Text);
                 datagrid.Items.Add(nuevoEmpleado);
-                datagrid.Items.Refresh();
+               
             }
         }
 
