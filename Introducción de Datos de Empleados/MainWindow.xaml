@@ -182,7 +182,7 @@
         </Button>
 
 
-        <DataGrid x:Name="employeeDataGrid" Grid.Row="21" Grid.ColumnSpan="2" ItemsSource="{Binding}"  AutoGenerateColumns="False" Margin="20,0">
+        <DataGrid x:Name="datagrid" Grid.Row="21" Grid.ColumnSpan="2" ItemsSource="{Binding}"  AutoGenerateColumns="False" Margin="20,0">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Nombre" Width="10*" Binding="{Binding Nombre}"/>
                 <DataGridTextColumn Header="Apellidos" Width="40*" Binding="{Binding Apellidos}"/>
