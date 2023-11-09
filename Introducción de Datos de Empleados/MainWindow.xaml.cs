@@ -1,4 +1,4 @@
-﻿using Microsoft.Win32;
+using Microsoft.Win32;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -25,8 +25,7 @@ namespace Introducción_de_Datos_de_Empleados
         public MainWindow()
         {
             InitializeComponent();
-            employees = new ObservableCollection<Employee>();
-            datagrid.ItemsSource = employees;
+            
         }
 
         private void Guardar_Click(object sender, RoutedEventArgs e)
