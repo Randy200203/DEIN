@@ -44,7 +44,7 @@
                    VerticalAlignment="Center" 
                    HorizontalAlignment="Center" Height="16" Margin="298,6,298,5" Width="196">
         </TextBlock>
-        <TextBlock Text="Nombre*  " Background="Transparent" 
+        <TextBlock Text="Nombre*  " x:Name="nombreTextBox" Background="Transparent" 
                    Grid.Row="1" 
                    VerticalAlignment="Center" 
                    Margin="10,5,326,6" Height="16">
@@ -54,7 +54,7 @@
                  Grid.Column="0" 
                  Grid.ColumnSpan="2">
         </TextBox>
-        <TextBlock Text="Apellidos " Background="Transparent" 
+        <TextBlock Text="Apellidos " x:Name="apellidosTextBox" Background="Transparent" 
                    Grid.Row="2" 
                    VerticalAlignment="Center" 
                    Margin="10,6,326,5" Height="16">
@@ -64,7 +64,7 @@
                  Grid.Column="0" 
                  Grid.ColumnSpan="2">
         </TextBox>
-        <TextBlock Text="Email* " Background="Transparent" 
+        <TextBlock Text="Email* " x:Name="emailTextBox" Background="Transparent" 
                    Grid.Row="3" 
                    VerticalAlignment="Center" 
                    Margin="10,5,326,6" Height="16">
@@ -74,7 +74,7 @@
                  Grid.Column="0" 
                  Grid.ColumnSpan="2">
         </TextBox>
-        <TextBlock Text="Teléfono " Background="Transparent" 
+        <TextBlock Text="Teléfono " x:Name="telefonoTextBox" Background="Transparent" 
                    Grid.Row="4" 
                    VerticalAlignment="Center" 
                    Margin="10,6,326,5" Height="16">
@@ -110,16 +110,17 @@
         <Button Content="Cargar Foto" 
                 Grid.Column="0" 
                 Grid.Row="8" 
-                Margin="120,5,150,5">
+                Margin="120,5,150,5" Cursor="Hand" Click="Cargar_Click">
         </Button>
+        <Image x:Name="imagenPrevia"  Width="50" Height="50"  HorizontalAlignment="Center"  Grid.Row="8" Margin="242,10,104,0"  />
         <StackPanel Grid.RowSpan="6" Grid.ColumnSpan="2" Grid.Row="10"  Orientation="Horizontal">
             <TextBlock Grid.Row="10"  Text="Domicilio"  Width="50" ></TextBlock>
             <StackPanel Orientation="Vertical" Margin="0,0,0,29">
-                <TextBox Width="350" Margin="10,0,0,5" Text="Direccion"></TextBox>
-                <TextBox  Width="350" Margin="10,0,0,5" Text="Ciudad"></TextBox>
-                <TextBox Width="350" Margin="10,0,0,5" Text="Provincia"></TextBox>
-                <TextBox Width="350" Margin="10,0,0,5" Text="Codigo Postal"></TextBox>
-                <TextBox Width="350" Margin="10,0,0,5" Text="Pais"></TextBox>
+                <TextBox Width="350" Margin="10,0,0,5" Text="Direccion" GotFocus="gotFocus" LostFocus="Txt_lostFocus"></TextBox>
+                <TextBox  Width="350" Margin="10,0,0,5" Text="Ciudad" GotFocus="gotFocus" LostFocus="Txt_lostFocus"></TextBox>
+                <TextBox Width="350" Margin="10,0,0,5" Text="Provincia" GotFocus="gotFocus" LostFocus="Txt_lostFocus"></TextBox>
+                <TextBox Width="350" Margin="10,0,0,5" Text="Codigo Postal" GotFocus="gotFocus" LostFocus="Txt_lostFocus"></TextBox>
+                <TextBox Width="350" Margin="10,0,0,5" Text="Pais" GotFocus="gotFocus" LostFocus="Txt_lostFocus"></TextBox>
             </StackPanel>
             <Image Source="Imagenes/company.jpg" Width="162" Margin="0,0,0,47"/>
         </StackPanel>
@@ -170,13 +171,29 @@
         <Button Content="Guadar" 
                 Grid.Column="0" 
                 Grid.Row="20" 
-                Margin="270,5,10,5">
+                Margin="270,5,10,5"
+                Cursor="Hand" Click="Guardar_Click">
         </Button>
         <Button Content="Cancelar" 
                 Grid.Column="1" 
                 Grid.Row="20" 
-                Margin="10,5,270,5">
+                Margin="10,5,270,5"
+                Cursor="Hand" Click="Cancelar_Click">
         </Button>
+
+
+        <DataGrid x:Name="datagrid" Grid.Row="21" Grid.ColumnSpan="2" ItemsSource="{Binding}"  AutoGenerateColumns="False" Margin="20,0">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Nombre" Width="10*" Binding="{Binding Nombre}"/>
+                <DataGridTextColumn Header="Apellidos" Width="40*" Binding="{Binding Apellidos}"/>
+                <DataGridTextColumn Header="Email" Width="20*" Binding="{Binding Email}"/>
+                <DataGridTextColumn Header="Teléfono" Width="10*" Binding="{Binding Telefono}"/>
+            </DataGrid.Columns>
+
+        </DataGrid>
+
+
+
 
     </Grid>
 
