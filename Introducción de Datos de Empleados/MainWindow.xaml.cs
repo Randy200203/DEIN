@@ -20,8 +20,6 @@ namespace Introducción_de_Datos_de_Empleados
     /// </summary>
     public partial class MainWindow : Window
     {
-        private IEnumerable employees;
-
         public MainWindow()
         {
             InitializeComponent();
@@ -48,9 +46,18 @@ namespace Introducción_de_Datos_de_Empleados
             }
             else
             {
-                Employee nuevoEmpleado = new Employee(nombreTextBox.Text, apellidosTextBox.Text, emailTextBox.Text, telefonoTextBox.Text);
+                // Obtener los datos ingresados en el formulario
+                string nombre = nombreTextBox.Text;
+                string apellidos = apellidosTextBox.Text;
+                string email = emailTextBox.Text;
+                string telefono = telefonoTextBox.Text;
+                // Otros campos...
+
+                // Crear un nuevo objeto Empleado con los datos
+                Employee nuevoEmpleado = new Employee(nombre, apellidos, email, telefono);
+                // Agregar el nuevo empleado al DataGrid
                 datagrid.Items.Add(nuevoEmpleado);
-               
+
             }
         }
 
@@ -78,17 +85,18 @@ namespace Introducción_de_Datos_de_Empleados
 
         public class Employee
         {
-            public string Nombre { get; set; }
-            public string Apellidos { get; set; }
-            public string Email { get; set; }
-            public string Telefono { get; set; }
+            public string nombre { get; set; }
+            public string apellidos { get; set; }
+            public string email { get; set; }
+            public string telefono { get; set; }
 
-            public Employee(string nombre, string apellidos, string email, string telefono)
+            public Employee(string nom, string ap, string em, string tel)
             {
-                this.Nombre = nombre;
-                this.Apellidos = apellidos;
-                this.Email = email;
-                this.Telefono = telefono;
+                nombre = nom;
+                apellidos = ap;
+                email = em;
+                telefono = tel;
+                // Inicializar otros campos
             }
         }
 
@@ -107,28 +115,18 @@ namespace Introducción_de_Datos_de_Empleados
         {
             if (sender is TextBox textbox)
             {
-                if (String.IsNullOrWhiteSpace(textbox.Text))
+                if (string.IsNullOrWhiteSpace(textbox.Text))
                 {
-                    if (textbox.Name == "box_direccion")
-                    {
+                    if (textbox.Name == "txtDireccion")
                         textbox.Text = "Dirección";
-                    }
-                    else if (textbox.Name == "box_ciudad")
-                    {
+                    else if (textbox.Name == "txtCiudad")
                         textbox.Text = "Ciudad";
-                    }
-                    else if (textbox.Name == "box_provincia")
-                    {
+                    else if (textbox.Name == "txtProvincia")
                         textbox.Text = "Provincia";
-                    }
-                    else if (textbox.Name == "box_codigo")
-                    {
+                    else if (textbox.Name == "txtCodigoPostal")
                         textbox.Text = "Código Postal";
-                    }
-                    else if (textbox.Name == "box_pais")
-                    {
+                    else if (textbox.Name == "txtPais")
                         textbox.Text = "País";
-                    }
                 }
             }
         }

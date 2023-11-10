@@ -44,42 +44,42 @@
                    VerticalAlignment="Center" 
                    HorizontalAlignment="Center" Height="16" Margin="298,6,298,5" Width="196">
         </TextBlock>
-        <TextBlock Text="Nombre*  " x:Name="nombreTextBox" Background="Transparent" 
+        <TextBlock Text="Nombre*  "  Background="Transparent" 
                    Grid.Row="1" 
                    VerticalAlignment="Center" 
                    Margin="10,5,326,6" Height="16">
         </TextBlock>
-        <TextBox Margin="70,1,320,1" 
+        <TextBox x:Name="nombreTextBox" Margin="70,1,320,1" 
                  Grid.Row ="1" 
                  Grid.Column="0" 
                  Grid.ColumnSpan="2">
         </TextBox>
-        <TextBlock Text="Apellidos " x:Name="apellidosTextBox" Background="Transparent" 
+        <TextBlock Text="Apellidos "  Background="Transparent" 
                    Grid.Row="2" 
                    VerticalAlignment="Center" 
                    Margin="10,6,326,5" Height="16">
         </TextBlock>
-        <TextBox Margin="70,1,320,1" 
+        <TextBox x:Name="apellidosTextBox" Margin="70,1,320,1" 
                  Grid.Row ="2" 
                  Grid.Column="0" 
                  Grid.ColumnSpan="2">
         </TextBox>
-        <TextBlock Text="Email* " x:Name="emailTextBox" Background="Transparent" 
+        <TextBlock Text="Email* "  Background="Transparent" 
                    Grid.Row="3" 
                    VerticalAlignment="Center" 
                    Margin="10,5,326,6" Height="16">
         </TextBlock>
-        <TextBox Margin="70,1,320,1" 
+        <TextBox x:Name="emailTextBox" Margin="70,1,320,1" 
                  Grid.Row ="3" 
                  Grid.Column="0" 
                  Grid.ColumnSpan="2">
         </TextBox>
-        <TextBlock Text="Teléfono " x:Name="telefonoTextBox" Background="Transparent" 
+        <TextBlock Text="Teléfono "  Background="Transparent" 
                    Grid.Row="4" 
                    VerticalAlignment="Center" 
                    Margin="10,6,326,5" Height="16">
         </TextBlock>
-        <TextBox Margin="70,1,104,1" 
+        <TextBox x:Name="telefonoTextBox" Margin="70,1,104,1" 
                  Grid.Row ="4" 
                  Grid.Column="0"/>
         <TextBlock Text="Fecha de nacimiento" Background="Transparent" 
@@ -116,11 +116,11 @@
         <StackPanel Grid.RowSpan="6" Grid.ColumnSpan="2" Grid.Row="10"  Orientation="Horizontal">
             <TextBlock Grid.Row="10"  Text="Domicilio"  Width="50" ></TextBlock>
             <StackPanel Orientation="Vertical" Margin="0,0,0,29">
-                <TextBox Width="350" Margin="10,0,0,5" Text="Direccion" GotFocus="gotFocus" LostFocus="Txt_lostFocus"></TextBox>
-                <TextBox  Width="350" Margin="10,0,0,5" Text="Ciudad" GotFocus="gotFocus" LostFocus="Txt_lostFocus"></TextBox>
-                <TextBox Width="350" Margin="10,0,0,5" Text="Provincia" GotFocus="gotFocus" LostFocus="Txt_lostFocus"></TextBox>
-                <TextBox Width="350" Margin="10,0,0,5" Text="Codigo Postal" GotFocus="gotFocus" LostFocus="Txt_lostFocus"></TextBox>
-                <TextBox Width="350" Margin="10,0,0,5" Text="Pais" GotFocus="gotFocus" LostFocus="Txt_lostFocus"></TextBox>
+                <TextBox x:Name="txtDireccion" Width="350" Margin="10,0,0,5" Text="Direccion" GotFocus="gotFocus" LostFocus="Txt_lostFocus"></TextBox>
+                <TextBox x:Name="txtCiudad" Width="350" Margin="10,0,0,5" Text="Ciudad" GotFocus="gotFocus" LostFocus="Txt_lostFocus"></TextBox>
+                <TextBox x:Name="txtProvincia" Width="350" Margin="10,0,0,5" Text="Provincia" GotFocus="gotFocus" LostFocus="Txt_lostFocus"></TextBox>
+                <TextBox x:Name="txtCodigoPostal" Width="350" Margin="10,0,0,5" Text="Codigo Postal" GotFocus="gotFocus" LostFocus="Txt_lostFocus"></TextBox>
+                <TextBox x:Name="txtPais" Width="350" Margin="10,0,0,5" Text="Pais" GotFocus="gotFocus" LostFocus="Txt_lostFocus"></TextBox>
             </StackPanel>
             <Image Source="Imagenes/company.jpg" Width="162" Margin="0,0,0,47"/>
         </StackPanel>
@@ -182,18 +182,14 @@
         </Button>
 
 
-        <DataGrid x:Name="datagrid" Grid.Row="21" Grid.ColumnSpan="2" ItemsSource="{Binding}"  AutoGenerateColumns="False" Margin="20,0">
+        <DataGrid x:Name="datagrid" Grid.Row="22" Grid.ColumnSpan="2" Grid.RowSpan="3"  AutoGenerateColumns="False" Margin="20,0">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Nombre" Width="10*" Binding="{Binding Nombre}"/>
-                <DataGridTextColumn Header="Apellidos" Width="40*" Binding="{Binding Apellidos}"/>
-                <DataGridTextColumn Header="Email" Width="20*" Binding="{Binding Email}"/>
-                <DataGridTextColumn Header="Teléfono" Width="10*" Binding="{Binding Telefono}"/>
+                <DataGridTextColumn Header="Nombre" Width="10*" Binding="{Binding nombre}"/>
+                <DataGridTextColumn Header="Apellidos" Width="40*" Binding="{Binding apellidos}"/>
+                <DataGridTextColumn Header="Email" Width="20*" Binding="{Binding email}"/>
+                <DataGridTextColumn Header="Teléfono" Width="10*" Binding="{Binding telefono}"/>
             </DataGrid.Columns>
-
         </DataGrid>
-
-
-
 
     </Grid>
 
