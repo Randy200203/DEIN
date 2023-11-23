@@ -19,10 +19,50 @@ namespace ProyectoFigma
     /// </summary>
     public partial class Login : Window
     {
+        private TextBox nombreTextBox;
+        private TextBox emailTextBox;
+
+
         public Login()
         {
             InitializeComponent();
         }
+
+        private void InitializeComponent()
+        {
+            throw new NotImplementedException();
+        }
+
+        // Agrega una clase para almacenar la información del usuario
+        public class UserInfo
+        {
+            public string Nombre { get; set; }
+            public string Email { get; set; }
+        }
+
+        // En el código detrás de la ventana de inicio de sesión
+        private void Button_Login(object sender, RoutedEventArgs e)
+        {
+            // Obtén los valores de nombre y correo electrónico
+            string nombre = nombreTextBox.Text;
+            string email = emailTextBox.Text;
+
+            // Crea una instancia de UserInfo y guárdala en alguna variable global
+            UserInfo currentUser = new UserInfo { Nombre = nombre, Email = email };
+
+            // Abre la ventana de perfil y pásale la información del usuario
+            profile profileWindow = new profile(currentUser);
+            profileWindow.Show();
+
+            // Cierra la ventana de inicio de sesión si es necesario
+            this.Close();
+
+            MainPage2 AbrirVentanMain2 = new MainPage2();
+            this.Close();
+            AbrirVentanMain2.Show();
+        }
+
+
         private void Button_MainMenu(object sender, RoutedEventArgs e)
         {
             MainWindow AbrirVentanaMain = new MainWindow();
@@ -47,14 +87,13 @@ namespace ProyectoFigma
             AbrirVentanaSign.Show();
         }
 
-        private void Button_Login(object sender, RoutedEventArgs e)
-        {
-            MainPage2 AbrirVentanMain2 = new MainPage2();
-            this.Close();
-            AbrirVentanMain2.Show();
 
-
-        }
+     // private void Button_Login_MainPage(object sender, RoutedEventArgs e)
+       // {
+         //   MainPage2 AbrirVentanMain2 = new MainPage2();
+           // this.Close();
+           // AbrirVentanMain2.Show();
+       // } 
 
 
         private void Button_Settings(object sender, RoutedEventArgs e)

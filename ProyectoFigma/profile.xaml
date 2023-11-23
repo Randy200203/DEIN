@@ -5,7 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProyectoFigma"
         mc:Ignorable="d"
-        Title="profile" Height="550" Width="800">
+        Title="Profile" Height="550" Width="800">
+    <Window.Resources>
+        <!-- Estilo para el DataGrid -->
+        <Style x:Key="DataGridStyle" TargetType="DataGrid">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="AutoGenerateColumns" Value="False"/>
+            <Setter Property="Width" Value="250"/>
+            <Setter Property="Margin" Value="0,26,0,46"/>
+        </Style>
+        <!-- Plantilla para la columna de nombre -->
+        <DataTemplate x:Key="NombreTemplate">
+            <StackPanel Orientation="Vertical">
+                <TextBlock Text="{Binding Nombre}"/>
+            </StackPanel>
+        </DataTemplate>
+    </Window.Resources>
+
+
     <Border CornerRadius="20">
         <Border CornerRadius="10" BorderThickness="5" Opacity="0.95">
             <Border.BorderBrush>
@@ -88,53 +105,13 @@
                 </Border>
 
                 <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.ColumnSpan="4" Grid.RowSpan="3" Grid.Row="2" Margin="0,47.8,0.2,39.6">
-
-                    <!--  <StackPanel Orientation="Vertical">
-                        <TextBlock Text="Name" />
-                        <Border CornerRadius="5" Width="193"
-                           Background="#FFFFFF" Height="40">
-                            <TextBlock Text="My Products" 
-                               FontWeight="Medium" FontSize="18" TextAlignment="Center"/>
-                        </Border>
-                        <TextBlock Text="Email" />
-                        <Border CornerRadius="5" Width="193"
-                           Background="#FFFFFF" Height="40">
-                            <TextBlock Text="My Products" 
-                               FontWeight="Medium" FontSize="18" TextAlignment="Center"/>
-                        </Border>
-                    </StackPanel> -->
-                    <StackPanel Orientation="Vertical">
-                        <TextBlock Text="Name" />
-                        <!-- Este es un comentario dentro del StackPanel -->
-                        <Border CornerRadius="5" Width="193" Background="#FFFFFF" Height="40">
-                            <TextBlock Text="My Products" FontWeight="Medium" FontSize="18" TextAlignment="Center"/>
-                        </Border>
-                        <TextBlock Text="Email" />
-                        <Border CornerRadius="5" Width="193" Background="#FFFFFF" Height="40">
-                            <TextBlock Text="My Products" FontWeight="Medium" FontSize="18" TextAlignment="Center"/>
-                        </Border>
-                    </StackPanel>
-
-                    <Image Source="images/profile.png" VerticalAlignment="Center" Height="60" 
-                           Margin="0,26,0,46" Width="96"></Image>
-                    <DataGrid HorizontalAlignment="Center" x:Name="datagrid" AutoGenerateColumns="False" 
-                              Width="250" 
-                              SelectionChanged="datagrid_SelectionChanged" Margin="0,26,0,46">
+                    <Image Source="images/profile.png" VerticalAlignment="Center" Height="60" Margin="0,26,0,46" Width="96"/>
+                    <DataGrid x:Name="datagrid" Style="{StaticResource DataGridStyle}" SelectionChanged="datagrid_SelectionChanged">
                         <DataGrid.Columns>
-                            <DataGridTemplateColumn Header="Nombre" Width="Auto">
-                                <DataGridTemplateColumn.CellTemplate>
-                                    <DataTemplate>
-                                        <StackPanel Orientation="Vertical">
-                                            <TextBlock Text="{Binding nombre}" />
-                                        </StackPanel>
-                                    </DataTemplate>
-                                </DataGridTemplateColumn.CellTemplate>
-                            </DataGridTemplateColumn>
-                            <DataGridTextColumn Header="Email" Width="20*" 
-                                                Binding="{Binding email}"/>
+                            <DataGridTemplateColumn Header="Nombre" Width="Auto" CellTemplate="{StaticResource NombreTemplate}"/>
+                            <DataGridTextColumn Header="Email" Width="20*" Binding="{Binding Email}"/>
                         </DataGrid.Columns>
                     </DataGrid>
-
                 </StackPanel>
 
 
