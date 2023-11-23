@@ -58,6 +58,7 @@
     <Compile Include="Contact_Us.xaml.cs">
       <DependentUpon>Contact_Us.xaml</DependentUpon>
     </Compile>
+    <Compile Include="datagrid.cs" />
     <Compile Include="Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
@@ -73,6 +74,7 @@
     <Compile Include="Sign_Up.cs">
       <DependentUpon>Sign_Up.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserInfo.cs" />
     <Page Include="Contact_Us.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

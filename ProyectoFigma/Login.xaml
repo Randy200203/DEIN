@@ -6,6 +6,13 @@
         xmlns:local="clr-namespace:ProyectoFigma"
         mc:Ignorable="d"
         Title="Login" Height="550" Width="800">
+
+    <Window.Resources>
+        <Style TargetType="TextBox">
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="FontFamily" Value="Times New Roman"/>
+        </Style>
+    </Window.Resources>
     <Border CornerRadius="20">
         <Border CornerRadius="10" BorderThickness="5" Opacity="0.95">
             <Border.BorderBrush>
@@ -19,6 +26,7 @@
                     <GradientStop Color="LightGreen" Offset="1"/>
                 </LinearGradientBrush>
             </Border.Background>
+
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -38,8 +46,8 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
-                <Image HorizontalAlignment="Left" 
-                      Source="Images\OK.png" Grid.RowSpan="2" Grid.ColumnSpan="2" Stretch="Fill"/>
+                <Image HorizontalAlignment="Left" Source="Images\OK.png" Grid.RowSpan="2" Grid.ColumnSpan="2" Stretch="Fill"/>
+
 
 
                 <Button Name="MainMenu_Button" Grid.Row="0" Grid.RowSpan="2" Grid.Column="2" Grid.ColumnSpan="2" 
@@ -88,17 +96,17 @@
                            VerticalAlignment="Center" FontSize="20" 
                            FontWeight="Bold"></TextBlock>
 
-                <TextBox x:Name="nombreTextBox" Grid.Row="2" Grid.Column="1"
-                         Grid.ColumnSpan="3" Margin="10,10,10,10" 
-                         AcceptsReturn="True" 
-                         TextWrapping="Wrap"></TextBox>
-                
+                <TextBox x:Name="nameTextBox" Grid.Row="2" Grid.Column="1" 
+                         Grid.ColumnSpan="3" Margin="10" 
+                         AcceptsReturn="True" TextWrapping="Wrap"/>
+
+
                 <TextBlock Grid.Row="3" Text="Email :" Background="Transparent"  
                            Margin="10,15,10,15" TextAlignment="Center" 
                            VerticalAlignment="Center" FontSize="20" 
                            FontWeight="Bold"></TextBlock>
 
-                <TextBox x:Name="emailTextBox" Grid.Row="3" Grid.Column="1"
+                <TextBox x:Name="mailTextBox" Grid.Row="3" Grid.Column="1"
                          Grid.ColumnSpan="3" Margin="10,10,10,10" 
                          AcceptsReturn="True" 
                          TextWrapping="Wrap"></TextBox>
@@ -122,12 +130,13 @@
                         FontWeight="ExtraBold" Cursor="Hand" Click="Button_Login">
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
-                            <Border Background="#F6A342"   BorderThickness="1.5" CornerRadius="10">
+                            <Border Background="#F6A342" BorderThickness="1.5" CornerRadius="10">
                                 <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
                             </Border>
                         </ControlTemplate>
                     </Button.Template>
                 </Button>
+
 
                 <Button BorderBrush="#F6A342" Name="Sign_Button" Grid.Row="6" Grid.Column="2" 
                         Content="Sign up" 
@@ -143,7 +152,7 @@
                     </Button.Template>
                 </Button>
 
-                <Button Grid.Column="0" Grid.Row="6" VerticalAlignment="Bottom" Height="30" 
+                <!--<Button Grid.Column="0" Grid.Row="6" VerticalAlignment="Bottom" Height="30" 
                         Margin="10,0,70,0" Content="Log Out"
                         Cursor="Hand" Click="Button_LogOut">
                     <Button.Template>
@@ -153,7 +162,7 @@
                             </Border>
                         </ControlTemplate>
                     </Button.Template>
-                </Button>
+                </Button>-->
             </Grid>
         </Border>
     </Border>

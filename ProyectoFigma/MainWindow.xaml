@@ -165,7 +165,7 @@
 
                 </TextBlock>
 
-                <Button Grid.Column="0" Grid.Row="6" 
+                <!--<Button Grid.Column="0" Grid.Row="6" 
                         Margin="10,42.2,70.2,0.6" Content="Log Out"
                         Cursor="Hand" Click="Button_LogOut">
                     <Button.Template>
@@ -175,7 +175,7 @@
                             </Border>
                         </ControlTemplate>
                     </Button.Template>
-                </Button>
+                </Button>-->
 
 
 

@@ -39,6 +39,9 @@ namespace ProyectoFigma
 
         private void Button_Profile(object sender, RoutedEventArgs e)
         {
+            Profile AbrirVentanaProfile = new Profile();
+            this.Close();
+            AbrirVentanaProfile.Show();
 
         }
 

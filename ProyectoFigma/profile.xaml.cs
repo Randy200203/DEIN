@@ -1,25 +1,35 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
-using static ProyectoFigma.Login;
 
 namespace ProyectoFigma
 {
-    public partial class profile : Window
+    public partial class Profile : Window
     {
+        public string comprobando;
         private Login.UserInfo currentUser;
+        //private DataGrid datagrid;
 
-        public profile(UserInfo currentUser)
+        public Profile()
         {
             InitializeComponent();
-            this.currentUser = currentUser;
+            addData(Login.nom,Login.emia);
+            //this.currentUser = currentUser;
 
-            // Inicializa el campo datagrid (asegúrate de que coincide con el nombre en tu XAML)
-            datagrid = FindName("datagrid") as DataGrid;
+            //// Inicializa el campo datagrid
+            //datagrid = FindName("datagrid") as DataGrid;
 
-            // Asigna currentUser correctamente
-            datagrid.ItemsSource = new List<UserInfo> { currentUser };
+            //// Crea una lista con el usuario actual y asígnala al datagrid
+            //List<Login.UserInfo> userList = new List<Login.UserInfo> { currentUser };
+            //datagrid.ItemsSource = userList;
+
+        }
+
+        public void addData(string nombre, string email)
+        {
+            UserInfo usuario = new UserInfo(nombre, email);
+            datagrid.Items.Add(usuario);
+           
         }
 
         private void Button_MainMenu(object sender, RoutedEventArgs e)
@@ -41,17 +51,24 @@ namespace ProyectoFigma
             AbrirVentanaSettings.Show();
         }
 
-        // Puedes agregar más eventos de botones según sea necesario
-
         private void datagrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             // Asegúrate de que hay elementos seleccionados y el DataGrid no está vacío
-            if (datagrid.SelectedItems.Count > 0)
+            if (datagrid.SelectedItems.Count > 0 && datagrid.SelectedItem is Login.UserInfo selectedUser)
             {
-                UserInfo selectedUser = (UserInfo)datagrid.SelectedItem;
                 MessageBox.Show($"Nombre: {selectedUser.Nombre}\nEmail: {selectedUser.Email}", "Usuario seleccionado");
             }
         }
 
+        public class UserInfo
+        {
+            public string Nombre { get; set; }
+            public string Email { get; set; }
+            public UserInfo(string nombre,string email)
+            {
+                this.Nombre = nombre;
+                this.Email = email;
+            }
+        }
     }
 }

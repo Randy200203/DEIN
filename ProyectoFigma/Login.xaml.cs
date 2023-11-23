@@ -19,41 +19,45 @@ namespace ProyectoFigma
     /// </summary>
     public partial class Login : Window
     {
-        private TextBox nombreTextBox;
-        private TextBox emailTextBox;
-
-
+        public static string nom;
+        public static string emia;
         public Login()
         {
             InitializeComponent();
-        }
-        // Agrega una clase para almacenar la información del usuario
-        public class UserInfo
-        {
-            public string Nombre { get; set; }
-            public string Email { get; set; }
+
+            // Asigna los controles del XAML a las variables
+            nameTextBox = FindName("nameTextBox") as TextBox;
+            mailTextBox = FindName("mailTextBox") as TextBox;
         }
 
-        // En el código detrás de la ventana de inicio de sesión
-        private void Button_Login(object sender, RoutedEventArgs e)
+        public void Button_Login(object sender, RoutedEventArgs e)
         {
-            // Obtén los valores de nombre y correo electrónico
-            string nombre = nombreTextBox.Text;
-            string email = emailTextBox.Text;
+            try
+            {
+                // Obtén los valores de nombre y correo electrónico
+                string nombre = nameTextBox.Text;
+                string email = mailTextBox.Text;
 
-            // Crea una instancia de UserInfo y guárdala en alguna variable global
-            UserInfo currentUser = new UserInfo { Nombre = nombre, Email = email };
+                if (string.IsNullOrWhiteSpace(nombre) || string.IsNullOrWhiteSpace(email))
+                {
+                    MessageBox.Show("Los campos Nombre y E-mail no pueden estar vacíos", "Error");
+                    return;
+                }
+                
+                nom = nameTextBox.Text;
+                emia = mailTextBox.Text;
 
-            // Abre la ventana de perfil y pásale la información del usuario
-            profile profileWindow = new profile(currentUser);
-            profileWindow.Show();
 
-            // Cierra la ventana de inicio de sesión si es necesario
-            this.Close();
+                MainPage2 main2 = new MainPage2();
+                this.Close();
+                main2.Show();
 
-            MainPage2 AbrirVentanMain2 = new MainPage2();
-            this.Close();
-            AbrirVentanMain2.Show();
+                // Resto del código para crear UserInfo y abrir la ventana de perfil
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}", "Error");
+            }
         }
 
 
@@ -80,21 +84,17 @@ namespace ProyectoFigma
             this.Close();
             AbrirVentanaSign.Show();
         }
-
-
-     // private void Button_Login_MainPage(object sender, RoutedEventArgs e)
-       // {
-         //   MainPage2 AbrirVentanMain2 = new MainPage2();
-           // this.Close();
-           // AbrirVentanMain2.Show();
-       // } 
-
-
         private void Button_Settings(object sender, RoutedEventArgs e)
         {
             Settings AbrirVentanaSettings = new Settings();
             this.Close();
             AbrirVentanaSettings.Show();
+        }
+
+        internal class UserInfo
+        {
+            public object Nombre { get; internal set; }
+            public object Email { get; internal set; }
         }
     }
 }
