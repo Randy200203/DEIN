@@ -28,5 +28,20 @@ namespace ProyectoFigma
         {
 
         }
+
+        private void Button_MainMenu(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_favourite(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Settings(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

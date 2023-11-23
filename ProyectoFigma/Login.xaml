@@ -83,29 +83,40 @@
                         </ControlTemplate>
                     </Button.Template>
                 </Button>
-                <TextBlock Grid.Row="2" Text="Email :" Background="Transparent"  
+                <TextBlock Grid.Row="2" Text="Name :" Background="Transparent"  
                            Margin="10,15,10,15" TextAlignment="Center" 
                            VerticalAlignment="Center" FontSize="20" 
                            FontWeight="Bold"></TextBlock>
 
-                <TextBox Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" Margin="10,10,10,10" 
+                <TextBox x:Name="nombreTextBox" Grid.Row="2" Grid.Column="1"
+                         Grid.ColumnSpan="3" Margin="10,10,10,10" 
+                         AcceptsReturn="True" 
+                         TextWrapping="Wrap"></TextBox>
+                
+                <TextBlock Grid.Row="3" Text="Email :" Background="Transparent"  
+                           Margin="10,15,10,15" TextAlignment="Center" 
+                           VerticalAlignment="Center" FontSize="20" 
+                           FontWeight="Bold"></TextBlock>
+
+                <TextBox x:Name="emailTextBox" Grid.Row="3" Grid.Column="1"
+                         Grid.ColumnSpan="3" Margin="10,10,10,10" 
                          AcceptsReturn="True" 
                          TextWrapping="Wrap"></TextBox>
 
-                <TextBlock Grid.Row="3" Text="Password :" Background="Transparent"  
+                <TextBlock Grid.Row="4" Text="Password :" Background="Transparent"  
                            Margin="10,15,10,15" TextAlignment="Center" 
                            VerticalAlignment="Center" FontSize="20" 
                            FontWeight="Bold"></TextBlock>
 
-                <TextBox Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3" 
+                <TextBox Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3" 
                          Margin="10,10,10,10" AcceptsReturn="True" 
                          TextWrapping="Wrap"></TextBox>
 
-                <TextBlock Text="You don't have an account?" Grid.Row="5" Grid.Column="2" 
+                <TextBlock Text="You don't have an account?" Grid.Row="6" 
                            TextWrapping="Wrap" 
-                           Margin="10,10,10,10"  FontSize="12" FontWeight="Heavy"></TextBlock>
+                           Margin="131,8.6,20.4,11.2"  FontSize="12" FontWeight="Heavy" Grid.ColumnSpan="2"/>
 
-                <Button BorderBrush="#F6A342" Name="Login_Button" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3"
+                <Button BorderBrush="#F6A342" Name="Login_Button" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="3"
                         Content="Login"
                         Foreground="Black" 
                         FontWeight="ExtraBold" Cursor="Hand" Click="Button_Login">
@@ -118,7 +129,7 @@
                     </Button.Template>
                 </Button>
 
-                <Button BorderBrush="#F6A342" Name="Sign_Button" Grid.Row="5" Grid.Column="3" 
+                <Button BorderBrush="#F6A342" Name="Sign_Button" Grid.Row="6" Grid.Column="2" 
                         Content="Sign up" 
                         Height="50" Width="110"
                         Background="Transparent" Foreground="Black" 

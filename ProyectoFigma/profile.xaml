@@ -87,44 +87,31 @@
                                TextAlignment="Center" />
                 </Border>
 
-                <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.ColumnSpan="4" 
-                            Grid.RowSpan="2" Grid.Row="2">
-                    <Image Source="images/profile.png" VerticalAlignment="Center"
-                           Height="60" Margin="0,33,0,52.6" Width="96"></Image>
-                    <TextBlock Text="Name:" Grid.Column="0" Grid.Row="2" 
-                           VerticalAlignment="Center" FontSize="17" 
-                           FontWeight="Medium"/>
-                    <Border CornerRadius="5" Grid.Row="2" Background="#FFFFFF" Height="40">
-                        <TextBlock Width="300" TextAlignment="Center">
-                            <Hyperlink NavigateUri="mailto:rachana@educacion.navarra.es">
-                                <Run Text="rachana@educacion.navarra.es" />
-                            </Hyperlink>
-                        </TextBlock>
-                    </Border>
+                <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.ColumnSpan="4" Grid.RowSpan="3" Grid.Row="2" Margin="0,47.8,0.2,39.6">
+
+
+                    <Image Source="images/profile.png" VerticalAlignment="Center" Height="60" 
+                           Margin="0,33,0,52.6" Width="96"></Image>
+                    <DataGrid HorizontalAlignment="Center" x:Name="datagrid" AutoGenerateColumns="False" 
+                              Width="250" 
+                              SelectionChanged="datagrid_SelectionChanged" Margin="0,26,0,46">
+                        <DataGrid.Columns>
+                            <DataGridTemplateColumn Header="Nombre" Width="Auto">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <StackPanel Orientation="Vertical">
+                                            <TextBlock Text="{Binding nombre}" />
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                            <DataGridTextColumn Header="Email" Width="20*" 
+                                                Binding="{Binding email}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
 
                 </StackPanel>
-                <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.ColumnSpan="4" 
-                            Grid.RowSpan="2" Grid.Row="3">
-                    <Image Source="images/service.jpg" VerticalAlignment="Center"
-                           Height="30"></Image>
-                    <TextBlock Text="Conatc Service :" Grid.Column="0" Grid.Row="2" 
-                           VerticalAlignment="Center" FontSize="17" 
-                           FontWeight="Medium" Margin="0,62,0,61.6" Width="133"/>
-                    <Border CornerRadius="5" Grid.Row="2"
-                           Background="#FFFFFF" Height="40">
-                        <TextBlock Text="643505280" 
-                                   TextAlignment="Center" Width="288"/>
-                    </Border>
-                </StackPanel>
-                <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.ColumnSpan="4" 
-                            Grid.RowSpan="2" Grid.Row="4">
 
-                    <TextBlock Text="Locate Us:" Grid.Column="0" Grid.Row="2" 
-                           VerticalAlignment="Center" FontSize="17" 
-                           FontWeight="Medium" Margin="0,62,0,61.6" Width="133"/>
-                    <Image Source="images/maps.jpg" VerticalAlignment="Center"
-                           Height="108" Margin="0,28,0,9.6" Width="363"></Image>
-                </StackPanel>
 
 
                 <Button  Name="Settings_Button" Grid.Column="6" Grid.Row="6" 
@@ -140,6 +127,30 @@
                         </ControlTemplate>
                     </Button.Template>
                 </Button>
+
+                <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.ColumnSpan="4" 
+                            Grid.RowSpan="2" Grid.Row="4">
+                    <Image Source="images/product.png" VerticalAlignment="Center"
+                           Height="60" Margin="0,33,0,52.6" Width="96"></Image>
+
+                    <Border CornerRadius="5" Margin="0,45,0,62.2" Width="193"
+                           Background="#FFFFFF" Height="40">
+                        <TextBlock Text="My Products" 
+                               FontWeight="Medium" FontSize="18"    TextAlignment="Center"/>
+                    </Border>
+                </StackPanel>
+                
+                <StackPanel Orientation="Horizontal" Grid.Column="3" Grid.ColumnSpan="4" 
+                            Grid.RowSpan="2" Grid.Row="4">
+                    <Image Source="images/wallet.png" VerticalAlignment="Center"
+                           Height="60" Margin="0,33,0,52.6" Width="96"></Image>
+
+                    <Border CornerRadius="5" Margin="0,45,0,62.2" Width="193"
+                           Background="#FFFFFF" Height="40">
+                        <TextBlock Text="My Wallet" 
+                               FontWeight="Medium" FontSize="18"    TextAlignment="Center"/>
+                    </Border>
+                </StackPanel>
 
             </Grid>
         </Border>
