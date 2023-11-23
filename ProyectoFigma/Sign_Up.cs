@@ -43,11 +43,9 @@ namespace ProyectoFigma
 
         private void Button_ContactUs(object sender, RoutedEventArgs e)
         {
-
-        }
-
-        private void Button_LocateUs(object sender, RoutedEventArgs e)
-        {
+            Conatct_Us AbrirVentanaLogin = new Conatct_Us();
+            this.Close();
+            AbrirVentanaLogin.Show();
 
         }
 
@@ -58,9 +56,14 @@ namespace ProyectoFigma
             AbrirVentanaLogin.Show();
         }
 
-        private void Button_LogOut(object sender, RoutedEventArgs e)
+       
+
+        private void Button_Settings(object sender, RoutedEventArgs e)
         {
-            System.Windows.Application.Current.Shutdown();
+            Settings AbrirVentanaSettings = new Settings();
+            this.Close();
+            AbrirVentanaSettings.Show();
+
         }
     }
   

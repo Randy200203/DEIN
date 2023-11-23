@@ -55,15 +55,25 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Contact_Us.xaml.cs">
+      <DependentUpon>Contact_Us.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainPage2.xaml.cs">
       <DependentUpon>MainPage2.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Settings.xaml.cs">
+      <DependentUpon>Settings.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Sign_Up.cs">
       <DependentUpon>Sign_Up.xaml</DependentUpon>
     </Compile>
+    <Page Include="Contact_Us.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Login.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -84,6 +94,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Settings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Sign_Up.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -121,6 +135,20 @@
     <Resource Include="Images\kubota.jpg" />
     <Resource Include="Images\OK.png" />
     <Resource Include="Images\profile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\mail.png" />
+    <Resource Include="Images\service.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\maps.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\privacy.png" />
+    <Resource Include="Images\terms.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\invitar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

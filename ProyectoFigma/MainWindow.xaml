@@ -98,11 +98,11 @@
                     </Button.Template>
                 </Button>
 
-                <Button  Name="LocateUs_Button" Grid.Row="6" Grid.Column="5" 
-                        Content="Locate Us" 
+                <Button  Name="Settings_Button" Grid.Row="6" Grid.Column="5" 
+                        Content="Settings" 
                         Height="50" Width="110"
                         Foreground="White" 
-                        FontWeight="ExtraBold" Cursor="Hand" Click="Button_LocateUs">
+                        FontWeight="ExtraBold" Cursor="Hand" Click="Button_Settings">
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
                             <Border Background="Black" BorderBrush="#F6A342" BorderThickness="3" >

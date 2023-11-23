@@ -1,11 +1,11 @@
-﻿<Window x:Class="ProyectoFigma.Login"
+﻿<Window x:Class="ProyectoFigma.Settings"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProyectoFigma"
         mc:Ignorable="d"
-        Title="Login" Height="550" Width="800">
+        Title="Settings" Height="550" Width="800">
     <Border CornerRadius="20">
         <Border CornerRadius="10" BorderThickness="5" Opacity="0.95">
             <Border.BorderBrush>
@@ -37,10 +37,8 @@
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
-
                 <Image HorizontalAlignment="Left" 
                       Source="Images\OK.png" Grid.RowSpan="2" Grid.ColumnSpan="2" Stretch="Fill"/>
-
 
                 <Button Name="MainMenu_Button" Grid.Row="0" Grid.RowSpan="2" Grid.Column="2" Grid.ColumnSpan="2" 
                         Content="Achana Industries"
@@ -57,11 +55,84 @@
                         </ControlTemplate>
                     </Button.Template>
                 </Button>
-                <Button Name="ContactUs_Button" Grid.Row="6" Grid.Column="4" 
+
+                <Image Source="Images\profile.png" Grid.Row="0" Grid.Column="5" VerticalAlignment="Top" Height="46" Margin="30.4,55,40,0" Grid.RowSpan="2"/>
+                <Button Grid.Column="5" Grid.Row="1" 
+                        VerticalAlignment="Bottom" Margin="10" 
+                        Height="30" Name="Profile_button" 
+                        Content="Profile" Cursor="Hand" Click="Button_Profile">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Background="Transparent" BorderBrush="#F6A342" BorderThickness="3" >
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+
+                <Image Source="Images\favourite.png" Grid.Row="1" Grid.Column="4" VerticalAlignment="Center" Height="28" Margin="28.8,0.2,28.6,45.4" RenderTransformOrigin="-1.181,0.34"/>
+                <Button Grid.Column="4" Grid.Row="1" 
+                        VerticalAlignment="Bottom" Margin="10" 
+                        Height="30" Name="Favourite_button" 
+                        Content="Favourite" Cursor="Hand" Click="Button_favourite">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Background="Transparent" BorderBrush="#F6A342" BorderThickness="3" >
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+
+                <Border CornerRadius="5"  
+                        Grid.Column="2" Grid.Row="1"
+                        HorizontalAlignment="Center" 
+                        VerticalAlignment="Top" Background="#ECAB06"
+                        Height="30" Margin="92.6,73.4,85.2,0" 
+                        Grid.RowSpan="2" Grid.ColumnSpan="2" Width="83">
+                    <TextBlock Text="Settings" FontWeight="Medium" FontSize="18" TextAlignment="Center" />
+                </Border>
+
+                <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.ColumnSpan="4" 
+                            Grid.RowSpan="2" Grid.Row="2">
+                    <Image Source="images/privacy.png" VerticalAlignment="Center"
+                           Height="60" Margin="0,33,0,52.6" Width="96"></Image>
+
+                    <Border CornerRadius="5" Background="#FFFFFF" Margin="0,45,0,69.6" Width="189">
+                        <TextBlock  Text="Privacy"
+                                    Width="100" TextAlignment="Center">
+                        </TextBlock>
+                    </Border>
+
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.ColumnSpan="4" 
+                            Grid.RowSpan="2" Grid.Row="3">
+                    <Image  Source="images/terms.png" VerticalAlignment="Bottom"
+                          Height="60" Margin="0,0,0,53.4" Width="96"></Image>
+                    <Border CornerRadius="5" Margin="0,45,0,69.6" Width="189"
+                           Background="#FFFFFF" Height="40">
+                        <TextBlock Text="Terms and Conditions" 
+                                   TextAlignment="Center"/>
+                    </Border>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.ColumnSpan="4" 
+                            Grid.RowSpan="2" Grid.Row="4">
+                    <Image Source="images/invitar.png" VerticalAlignment="Center"
+                           Height="60" Margin="0,33,0,52.6" Width="96"></Image>
+
+                    <Border CornerRadius="5" Margin="0,45,0,62.2" Width="193"
+                           Background="#FFFFFF" Height="40">
+                        <TextBlock Text="Invite  a friend" 
+                                   TextAlignment="Center"/>
+                    </Border>
+                </StackPanel>
+
+
+                <Button  Name="ContactUs_Button" Grid.Column="6" Grid.Row="6" 
                         Content="Contact Us" 
                         Height="50" Width="110"
                         Foreground="White" 
-                        FontWeight="ExtraBold" Cursor="Hand" Click="Button_ContactUs">
+                        FontWeight="ExtraBold" Cursor="Hand" Click="Button_ContactUs" RenderTransformOrigin="0.5,0.504">
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
                             <Border Background="Black" BorderBrush="#F6A342" BorderThickness="3" >
@@ -70,69 +141,8 @@
                         </ControlTemplate>
                     </Button.Template>
                 </Button>
-                <Button  Name="Settings_Button" Grid.Row="6" Grid.Column="5" 
-                        Content="Settings" 
-                        Height="50" Width="110"
-                        Foreground="White" 
-                        FontWeight="ExtraBold" Cursor="Hand" Click="Button_Settings" RenderTransformOrigin="0.5,0.504">
-                    <Button.Template>
-                        <ControlTemplate TargetType="Button">
-                            <Border Background="Black" BorderBrush="#F6A342" BorderThickness="3" >
-                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
-                            </Border>
-                        </ControlTemplate>
-                    </Button.Template>
-                </Button>
-                <TextBlock Grid.Row="2" Text="Email :" Background="Transparent"  
-                           Margin="10,15,10,15" TextAlignment="Center" 
-                           VerticalAlignment="Center" FontSize="20" 
-                           FontWeight="Bold"></TextBlock>
 
-                <TextBox Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" Margin="10,10,10,10" 
-                         AcceptsReturn="True" 
-                         TextWrapping="Wrap"></TextBox>
-
-                <TextBlock Grid.Row="3" Text="Password :" Background="Transparent"  
-                           Margin="10,15,10,15" TextAlignment="Center" 
-                           VerticalAlignment="Center" FontSize="20" 
-                           FontWeight="Bold"></TextBlock>
-
-                <TextBox Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3" 
-                         Margin="10,10,10,10" AcceptsReturn="True" 
-                         TextWrapping="Wrap"></TextBox>
-
-                <TextBlock Text="You don't have an account?" Grid.Row="5" Grid.Column="2" 
-                           TextWrapping="Wrap" 
-                           Margin="10,10,10,10"  FontSize="12" FontWeight="Heavy"></TextBlock>
-
-                <Button BorderBrush="#F6A342" Name="Login_Button" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3"
-                        Content="Login"
-                        Foreground="Black" 
-                        FontWeight="ExtraBold" Cursor="Hand" Click="Button_Login">
-                    <Button.Template>
-                        <ControlTemplate TargetType="Button">
-                            <Border Background="#F6A342"   BorderThickness="1.5" CornerRadius="10">
-                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
-                            </Border>
-                        </ControlTemplate>
-                    </Button.Template>
-                </Button>
-
-                <Button BorderBrush="#F6A342" Name="Sign_Button" Grid.Row="5" Grid.Column="3" 
-                        Content="Sign up" 
-                        Height="50" Width="110"
-                        Background="Transparent" Foreground="Black" 
-                        FontWeight="ExtraBold" Cursor="Hand" Click="Button_Sign">
-                    <Button.Template>
-                        <ControlTemplate TargetType="Button">
-                            <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="1.5" CornerRadius="10">
-                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
-                            </Border>
-                        </ControlTemplate>
-                    </Button.Template>
-                </Button>
-
-                <Button Grid.Column="0" Grid.Row="6" VerticalAlignment="Bottom" Height="30" 
+                <Button Grid.Column="0" Grid.Row="6" VerticalAlignment="Center" Height="30" 
                         Margin="10,0,70,0" Content="Log Out"
                         Cursor="Hand" Click="Button_LogOut">
                     <Button.Template>
@@ -143,6 +153,7 @@
                         </ControlTemplate>
                     </Button.Template>
                 </Button>
+
             </Grid>
         </Border>
     </Border>
