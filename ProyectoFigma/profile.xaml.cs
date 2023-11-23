@@ -9,7 +9,6 @@ namespace ProyectoFigma
     public partial class profile : Window
     {
         private Login.UserInfo currentUser;
-        private DataGrid datagrid;
 
         public profile(UserInfo currentUser)
         {
@@ -21,11 +20,6 @@ namespace ProyectoFigma
 
             // Asigna currentUser correctamente
             datagrid.ItemsSource = new List<UserInfo> { currentUser };
-        }
-
-        private void InitializeComponent()
-        {
-            throw new NotImplementedException();
         }
 
         private void Button_MainMenu(object sender, RoutedEventArgs e)

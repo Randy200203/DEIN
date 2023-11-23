@@ -24,11 +24,6 @@ namespace ProyectoFigma
             InitializeComponent();
         }
 
-        private void InitializeComponent()
-        {
-            throw new NotImplementedException();
-        }
-
         private void Button_MainMenu(object sender, RoutedEventArgs e)
         {
             MainWindow AbrirVentanaMain = new MainWindow();
@@ -49,7 +44,7 @@ namespace ProyectoFigma
 
         private void Button_ContactUs(object sender, RoutedEventArgs e)
         {
-            Conatct_Us AbrirVentanaContact = new Conatct_Us();
+            Contact_Us AbrirVentanaContact = new Contact_Us();
             this.Close();
             AbrirVentanaContact.Show();
         }
