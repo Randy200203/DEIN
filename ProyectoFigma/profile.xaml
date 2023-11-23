@@ -89,9 +89,34 @@
 
                 <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.ColumnSpan="4" Grid.RowSpan="3" Grid.Row="2" Margin="0,47.8,0.2,39.6">
 
+                    <!--  <StackPanel Orientation="Vertical">
+                        <TextBlock Text="Name" />
+                        <Border CornerRadius="5" Width="193"
+                           Background="#FFFFFF" Height="40">
+                            <TextBlock Text="My Products" 
+                               FontWeight="Medium" FontSize="18" TextAlignment="Center"/>
+                        </Border>
+                        <TextBlock Text="Email" />
+                        <Border CornerRadius="5" Width="193"
+                           Background="#FFFFFF" Height="40">
+                            <TextBlock Text="My Products" 
+                               FontWeight="Medium" FontSize="18" TextAlignment="Center"/>
+                        </Border>
+                    </StackPanel> -->
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="Name" />
+                        <!-- Este es un comentario dentro del StackPanel -->
+                        <Border CornerRadius="5" Width="193" Background="#FFFFFF" Height="40">
+                            <TextBlock Text="My Products" FontWeight="Medium" FontSize="18" TextAlignment="Center"/>
+                        </Border>
+                        <TextBlock Text="Email" />
+                        <Border CornerRadius="5" Width="193" Background="#FFFFFF" Height="40">
+                            <TextBlock Text="My Products" FontWeight="Medium" FontSize="18" TextAlignment="Center"/>
+                        </Border>
+                    </StackPanel>
 
                     <Image Source="images/profile.png" VerticalAlignment="Center" Height="60" 
-                           Margin="0,33,0,52.6" Width="96"></Image>
+                           Margin="0,26,0,46" Width="96"></Image>
                     <DataGrid HorizontalAlignment="Center" x:Name="datagrid" AutoGenerateColumns="False" 
                               Width="250" 
                               SelectionChanged="datagrid_SelectionChanged" Margin="0,26,0,46">
