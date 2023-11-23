@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace ProyectoFigma
 {
     /// <summary>
-    /// Interaction logic for Conatct_Us.xaml
+    /// Lógica de interacción para Contact_Us.xaml
     /// </summary>
-    public partial class Conatct_Us : Window
+    public partial class Contact_Us : Window
     {
-        public Conatct_Us()
+        public Contact_Us()
         {
             InitializeComponent();
         }
@@ -31,6 +31,15 @@ namespace ProyectoFigma
 
         private void Button_Profile(object sender, RoutedEventArgs e)
         {
+          
+
+        }
+
+        private void Button_MainMenu(object sender, RoutedEventArgs e)
+        {
+            MainPage2 AbrirVentanaMain2 = new MainPage2();
+            this.Close();
+            AbrirVentanaMain2.Show();
 
         }
 
@@ -39,14 +48,6 @@ namespace ProyectoFigma
             Settings AbrirVentanaSettings = new Settings();
             this.Close();
             AbrirVentanaSettings.Show();
-
-        }
-
-        private void Button_MainMenu(object sender, RoutedEventArgs e)
-        {
-            MainWindow AbrirVentanaMain = new MainWindow();
-            this.Close();
-            AbrirVentanaMain.Show();
 
         }
     }

@@ -24,6 +24,11 @@ namespace ProyectoFigma
             InitializeComponent();
         }
 
+        private void InitializeComponent()
+        {
+            throw new NotImplementedException();
+        }
+
         private void Button_MainMenu(object sender, RoutedEventArgs e)
         {
             MainWindow AbrirVentanaMain = new MainWindow();

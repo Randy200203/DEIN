@@ -27,12 +27,6 @@ namespace ProyectoFigma
         {
             InitializeComponent();
         }
-
-        private void InitializeComponent()
-        {
-            throw new NotImplementedException();
-        }
-
         // Agrega una clase para almacenar la información del usuario
         public class UserInfo
         {
@@ -74,7 +68,7 @@ namespace ProyectoFigma
 
         private void Button_ContactUs(object sender, RoutedEventArgs e)
         {
-            Conatct_Us AbrirVentanaLogin = new Conatct_Us();
+            Contact_Us AbrirVentanaLogin = new Contact_Us();
             this.Close();
             AbrirVentanaLogin.Show();
 

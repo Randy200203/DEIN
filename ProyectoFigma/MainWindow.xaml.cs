@@ -24,6 +24,8 @@ namespace ProyectoFigma
         {
             InitializeComponent();
         }
+
+ 
         private void Button_MainMenu(object sender, RoutedEventArgs e)
         {
             MainWindow AbrirVentanaMain = new MainWindow();
@@ -47,7 +49,7 @@ namespace ProyectoFigma
 
         private void Button_ContactUs(object sender, RoutedEventArgs e)
         {
-            Conatct_Us AbrirVentanaLogin = new Conatct_Us();
+            Contact_Us AbrirVentanaLogin = new Contact_Us();
             this.Close();
             AbrirVentanaLogin.Show();
 
