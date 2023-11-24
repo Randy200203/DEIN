@@ -59,6 +59,9 @@
       <DependentUpon>Contact_Us.xaml</DependentUpon>
     </Compile>
     <Compile Include="datagrid.cs" />
+    <Compile Include="favorite.xaml.cs">
+      <DependentUpon>favorite.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
@@ -76,6 +79,10 @@
     </Compile>
     <Compile Include="UserInfo.cs" />
     <Page Include="Contact_Us.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="favorite.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -165,6 +172,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\location.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\man-tgs1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Big-Gun-1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

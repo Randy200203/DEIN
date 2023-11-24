@@ -6,6 +6,33 @@
         xmlns:local="clr-namespace:ProyectoFigma"
         mc:Ignorable="d"
         Title="MainPage2" Height="550" Width="800">
+
+    <Window.Resources>
+        <SolidColorBrush x:Key="ButtonBackgroundBrush" Color="#F6A342"/>
+        <SolidColorBrush x:Key="ButtonBorderBrush" Color="Black"/>
+        <SolidColorBrush x:Key="BlackBrush" Color="Black"/>
+        <SolidColorBrush x:Key="WhiteBrush" Color="White"/>
+        <SolidColorBrush x:Key="LightGreenBrush" Color="LightGreen"/>
+        <SolidColorBrush x:Key="SkyBlueBrush" Color="SkyBlue"/>
+        <SolidColorBrush x:Key="SandyBrownBrush" Color="SandyBrown"/>
+
+        <Style x:Key="CommonButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="{StaticResource ButtonBackgroundBrush}"/>
+            <Setter Property="Foreground" Value="{StaticResource BlackBrush}"/>
+            <Setter Property="FontWeight" Value="ExtraBold"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border BorderBrush="{StaticResource ButtonBorderBrush}" BorderThickness="3" CornerRadius="10">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
     <Border CornerRadius="20">
         <Border CornerRadius="10" BorderThickness="5" Opacity="0.95">
             <Border.BorderBrush>
@@ -41,12 +68,13 @@
                       Source="Images\OK.png" Grid.RowSpan="2" Grid.ColumnSpan="2" Stretch="Fill"/>
 
                 <Button Name="MainMenu_Button" Grid.Row="0" Grid.RowSpan="2" Grid.Column="2" Grid.ColumnSpan="2" 
-                        Content="Achana Industries"
-                        Background="Transparent" Foreground="Black" 
-                        FontWeight="DemiBold"
-                        FontFamily="Global User Interface"
-                        FontSize="30"
-                        Cursor="Hand" Click="Button_MainMenu">
+                    Content="Achana Industries"
+                    Background="Transparent" Foreground="Black" 
+                    FontWeight="DemiBold"
+                    FontFamily="Global User Interface"
+                    FontSize="30"
+                    Cursor="Hand" Click="Button_MainMenu"
+                    Style="{StaticResource CommonButtonStyle}">
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
                             <Border BorderThickness="1.5">
@@ -57,32 +85,17 @@
                 </Button>
 
                 <Image Source="Images\profile.png" Grid.Row="0" Grid.Column="5" VerticalAlignment="Top" Height="46" Margin="30.4,55,40,0" Grid.RowSpan="2"/>
-                <Button Grid.Column="5" Grid.Row="1" 
-                        VerticalAlignment="Bottom" Margin="10" 
-                        Height="30" Name="Profile_button" 
-                        Content="Profile" Cursor="Hand" Click="Button_Profile">
-                    <Button.Template>
-                        <ControlTemplate TargetType="Button">
-                            <Border Background="Transparent" BorderBrush="#F6A342" BorderThickness="3" >
-                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
-                            </Border>
-                        </ControlTemplate>
-                    </Button.Template>
-                </Button>
+                <Button Name="Profile_button" Grid.Column="5" Grid.Row="1" 
+                    VerticalAlignment="Bottom" Margin="10" 
+                    Height="30" 
+                    Content="Profile" Cursor="Hand" Style="{StaticResource CommonButtonStyle}" Click="Button_Profile"/>
 
                 <Image Source="Images\favourite.png" Grid.Row="1" Grid.Column="4" VerticalAlignment="Center" Height="28" Margin="28.8,0.2,28.6,45.4" RenderTransformOrigin="-1.181,0.34"/>
-                <Button Grid.Column="4" Grid.Row="1" 
-                        VerticalAlignment="Bottom" Margin="10" 
-                        Height="30" Name="Favourite_button" 
-                        Content="Favourite" Cursor="Hand" Click="Button_favourite">
-                    <Button.Template>
-                        <ControlTemplate TargetType="Button">
-                            <Border Background="Transparent" BorderBrush="#F6A342" BorderThickness="3" >
-                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
-                            </Border>
-                        </ControlTemplate>
-                    </Button.Template>
-                </Button>
+                <Button Name="Favourite_button" Grid.Column="4" Grid.Row="1" 
+                    VerticalAlignment="Bottom" Margin="10" 
+                    Height="30" 
+                    Content="Favourite" Cursor="Hand" Style="{StaticResource CommonButtonStyle}" Click="Button_favourite"/>
+
 
                 <Button Name="ContactUs_Button" Grid.Row="6" Grid.Column="4" 
                         Content="Contact Us" 
@@ -163,19 +176,6 @@
                            They come in a range of sizes and horsepower options, making them suitable for various applications."
                            FontWeight="Black" FontSize="20" TextWrapping="Wrap"></TextBlock>
 
-
-
-                <!--<Button Grid.Column="0" Grid.Row="6" VerticalAlignment="Bottom" Height="30" 
-                        Margin="10,0,70,0" Content="Log Out"
-                        Cursor="Hand" Click="Button_LogOut">
-                    <Button.Template>
-                        <ControlTemplate TargetType="Button">
-                            <Border Background="Red" BorderBrush="IndianRed" BorderThickness="3" CornerRadius="5" >
-                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
-                            </Border>
-                        </ControlTemplate>
-                    </Button.Template>
-                </Button>-->
 
             </Grid>
         </Border>

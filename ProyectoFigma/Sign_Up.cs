@@ -17,11 +17,19 @@ namespace ProyectoFigma
     /// <summary>
     /// Lógica de interacción para Sign_Up.xaml
     /// </summary>
+    
     public partial class Sign_Up : Window
     {
+        public static string name;
+        public static string mail;
+        
         public Sign_Up()
         {
             InitializeComponent();
+            nameTextBox = FindName("nameTextBox") as TextBox;
+            mailTextBox = FindName("mailTextBox") as TextBox;
+            
+            
         }
 
         private void Button_MainMenu(object sender, RoutedEventArgs e)
@@ -34,9 +42,33 @@ namespace ProyectoFigma
 
         private void Button_SignUp(object sender, RoutedEventArgs e)
         {
-            MainPage2 AbrirVentanaMain2 = new MainPage2();
-            this.Close();
-            AbrirVentanaMain2.Show();
+            try
+            {
+                // Obtén los valores de nombre y correo electrónico
+                string nombre = nameTextBox.Text;
+                string email = mailTextBox.Text;
+                string password = passwordText.Password;
+
+                if (string.IsNullOrWhiteSpace(nombre) || string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(password))
+                {
+                    MessageBox.Show("The fields Name, E-mail, and Password cannot be empty", "Error");
+                    return;
+                }
+
+                name = nameTextBox.Text;
+                mail = mailTextBox.Text;
+
+
+                MainPage2 main2 = new MainPage2();
+                this.Close();
+                main2.Show();
+
+                // Resto del código para crear UserInfo y abrir la ventana de perfil
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}", "Error");
+            }
 
         }
 
@@ -66,5 +98,7 @@ namespace ProyectoFigma
 
         }
     }
+  
+
   
 }

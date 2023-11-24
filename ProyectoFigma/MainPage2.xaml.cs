@@ -60,7 +60,9 @@ namespace ProyectoFigma
 
         private void Button_favourite(object sender, RoutedEventArgs e)
         {
-
+            favorite AbrirVentanaFavourite = new favorite();
+            this.Close();
+            AbrirVentanaFavourite.Show();
         }
 
         private void Button_ContactUs(object sender, RoutedEventArgs e)

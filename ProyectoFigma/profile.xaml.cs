@@ -7,13 +7,13 @@ namespace ProyectoFigma
     public partial class Profile : Window
     {
         public string comprobando;
-        private Login.UserInfo currentUser;
         //private DataGrid datagrid;
 
         public Profile()
         {
             InitializeComponent();
-            addData(Login.nom,Login.emia);
+            addData(Login.nom, Login.emia);
+            addData(Sign_Up.name, Sign_Up.mail);
             //this.currentUser = currentUser;
 
             //// Inicializa el campo datagrid
@@ -41,7 +41,9 @@ namespace ProyectoFigma
 
         private void Button_favourite(object sender, RoutedEventArgs e)
         {
-            // Lógica para el botón Favourite
+            favorite AbrirVentanaFavourite = new favorite();
+            this.Close();
+            AbrirVentanaFavourite.Show();
         }
 
         private void Button_Settings(object sender, RoutedEventArgs e)

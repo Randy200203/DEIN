@@ -15,36 +15,20 @@ using System.Windows.Shapes;
 namespace ProyectoFigma
 {
     /// <summary>
-    /// Interaction logic for Settings.xaml
+    /// Interaction logic for favorite.xaml
     /// </summary>
-    public partial class Settings : Window
+    public partial class favorite : Window
     {
-        public Settings()
+        public favorite()
         {
             InitializeComponent();
         }
 
         private void Button_MainMenu(object sender, RoutedEventArgs e)
         {
-            MainWindow AbrirVentanaMain = new MainWindow();
+            MainPage2 AbrirVentanaMain2 = new MainPage2();
             this.Close();
-            AbrirVentanaMain.Show();
-
-        }
-
-        private void Button_favourite(object sender, RoutedEventArgs e)
-        {
-            favorite AbrirVentanaFavourite = new favorite();
-            this.Close();
-            AbrirVentanaFavourite.Show();
-
-        }
-
-        private void Button_Profile(object sender, RoutedEventArgs e)
-        {
-            Profile AbrirVentanaProfile = new Profile();
-            this.Close();
-            AbrirVentanaProfile.Show();
+            AbrirVentanaMain2.Show();
 
         }
 
@@ -53,11 +37,14 @@ namespace ProyectoFigma
             Contact_Us AbrirVentanaContact = new Contact_Us();
             this.Close();
             AbrirVentanaContact.Show();
+
         }
 
-        private void Button_LogOut(object sender, RoutedEventArgs e)
+        private void Button_Profile(object sender, RoutedEventArgs e)
         {
-            System.Windows.Application.Current.Shutdown();
+            Profile AbrirVentanaProfile = new Profile();
+            this.Close();
+            AbrirVentanaProfile.Show();
         }
     }
 }

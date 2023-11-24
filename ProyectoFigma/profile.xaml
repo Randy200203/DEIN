@@ -7,19 +7,43 @@
         mc:Ignorable="d"
         Title="Profile" Height="550" Width="800">
     <Window.Resources>
-        <!-- Estilo para el DataGrid -->
+     
         <Style x:Key="DataGridStyle" TargetType="DataGrid">
             <Setter Property="HorizontalAlignment" Value="Center"/>
             <Setter Property="AutoGenerateColumns" Value="False"/>
             <Setter Property="Width" Value="250"/>
             <Setter Property="Margin" Value="0,26,0,46"/>
         </Style>
-        <!-- Plantilla para la columna de nombre -->
+  
         <DataTemplate x:Key="NombreTemplate">
             <StackPanel Orientation="Vertical">
                 <TextBlock Text="{Binding Nombre}"/>
             </StackPanel>
         </DataTemplate>
+
+        <SolidColorBrush x:Key="ButtonBackgroundBrush" Color="#F6A342"/>
+        <SolidColorBrush x:Key="ButtonBorderBrush" Color="Black"/>
+        <SolidColorBrush x:Key="BlackBrush" Color="Black"/>
+        <SolidColorBrush x:Key="WhiteBrush" Color="White"/>
+        <SolidColorBrush x:Key="LightGreenBrush" Color="LightGreen"/>
+        <SolidColorBrush x:Key="SkyBlueBrush" Color="SkyBlue"/>
+        <SolidColorBrush x:Key="SandyBrownBrush" Color="SandyBrown"/>
+
+        <Style x:Key="CommonButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="{StaticResource ButtonBackgroundBrush}"/>
+            <Setter Property="Foreground" Value="{StaticResource BlackBrush}"/>
+            <Setter Property="FontWeight" Value="ExtraBold"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border BorderBrush="{StaticResource ButtonBorderBrush}" BorderThickness="3" CornerRadius="10">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </Window.Resources>
 
 
@@ -80,19 +104,14 @@
                        HorizontalAlignment="Center"
                        Height="37" 
                        Margin="102.8,37,103,73.2" Width="55" />
-                <Button Grid.Column="4" Grid.Row="1"  Grid.ColumnSpan="2"
+            
+                <Button Name="Favourite_button" Grid.Column="4" Grid.Row="1"  Grid.ColumnSpan="2"
                         VerticalAlignment="Top" HorizontalAlignment="Center"
                         Margin="10" 
-                        Height="30" Name="Favourite_button" 
-                        Content="Favourite" Cursor="Hand" Click="Button_favourite">
-                    <Button.Template>
-                        <ControlTemplate TargetType="Button">
-                            <Border Background="Transparent" BorderBrush="#F6A342" BorderThickness="3" >
-                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
-                            </Border>
-                        </ControlTemplate>
-                    </Button.Template>
-                </Button>
+                        Height="30"
+                    Content="Favourite" Cursor="Hand" 
+                        Style="{StaticResource CommonButtonStyle}" 
+                        Click="Button_favourite"/>
 
                 <Border CornerRadius="5"  
                         Grid.Column="2" Grid.Row="1"
@@ -106,7 +125,7 @@
 
                 <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.ColumnSpan="4" Grid.RowSpan="3" Grid.Row="2" Margin="0,47.8,0.2,39.6">
                     <Image Source="images/profile.png" VerticalAlignment="Center" Height="60" Margin="0,26,0,46" Width="96"/>
-                    <DataGrid x:Name="datagrid" ItemsSource="{Binding}" Style="{StaticResource DataGridStyle}" AutoGenerateColumns="True" SelectionChanged="datagrid_SelectionChanged">
+                    <DataGrid x:Name="datagrid" ItemsSource="{Binding}" Style="{StaticResource DataGridStyle}" AutoGenerateColumns="True" SelectionChanged="datagrid_SelectionChanged" Margin="0,26,0,11">
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}" />
                             <DataGridTextColumn Header="Email" Binding="{Binding Email}" />

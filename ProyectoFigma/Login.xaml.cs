@@ -37,10 +37,11 @@ namespace ProyectoFigma
                 // Obtén los valores de nombre y correo electrónico
                 string nombre = nameTextBox.Text;
                 string email = mailTextBox.Text;
+                string password = passwordText.Password;
 
-                if (string.IsNullOrWhiteSpace(nombre) || string.IsNullOrWhiteSpace(email))
+                if (string.IsNullOrWhiteSpace(nombre) || string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(password))
                 {
-                    MessageBox.Show("Los campos Nombre y E-mail no pueden estar vacíos", "Error");
+                    MessageBox.Show("The fields Name, E-mail, and Password cannot be empty", "Error");
                     return;
                 }
                 
