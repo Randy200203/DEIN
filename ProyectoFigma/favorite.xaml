@@ -86,13 +86,17 @@
                        HorizontalAlignment="Center"
                        Height="37" 
                        Margin="102.8,37,103,73.2" Width="55"  />
-                <Button Name="Favourite_button" Grid.Column="4" Grid.Row="1"  Grid.ColumnSpan="2"
+               
+
+                <Button Name="Profile_button" Grid.Column="4" Grid.Row="1"  Grid.ColumnSpan="2"
                         VerticalAlignment="Top" HorizontalAlignment="Center"
                         Margin="10" 
                         Height="30"
-                    Content="Favourite" Cursor="Hand" 
+                    Content="Profile" Cursor="Hand" 
                         Style="{StaticResource CommonButtonStyle}" 
-                        Click="Button_favourite"/>
+                        Click="Button_Profile"/>
+
+
 
                 <Border CornerRadius="5"  
                         Grid.Column="2" Grid.Row="1"
