@@ -1,0 +1,48 @@
+﻿<Window x:Class="GestionEmpleados2023.AgregarEmpleado"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GestionEmpleados2023"
+        mc:Ignorable="d"
+        Title="AgregarEmpleado" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="1" Grid.ColumnSpan="2" Orientation="Vertical" >
+            <TextBlock x:Name="txtNombre" Text="Nombre"/>
+            <TextBox></TextBox>
+        </StackPanel>
+        <StackPanel Grid.Row="2" Grid.ColumnSpan="2" Orientation="Vertical" >
+            <TextBlock x:Name="txtApellidos" Text="Apellidos"/>
+            <TextBox></TextBox>
+        </StackPanel>
+
+        <StackPanel Grid.Row="3" Grid.ColumnSpan="2" Orientation="Vertical" >
+            <TextBlock Text="Es Usuario"/>
+            <CheckBox x:Name="chkEsUuario" HorizontalAlignment="Right" Width="396"></CheckBox>
+        </StackPanel>
+
+        <StackPanel Grid.Row="4" Grid.ColumnSpan="2" Orientation="Vertical" >
+            <TextBlock x:Name="txtEdad" Text="Edad"/>
+            <TextBox></TextBox>
+            
+        </StackPanel>
+        <Button Content="Agregar Empleado" Grid.Row="4" VerticalAlignment="Bottom" 
+                Height="20" Margin="0,0,0,18" Grid.ColumnSpan="4" Cursor="Hand" Click="Button_Agregar"/>
+    </Grid>
+</Window>

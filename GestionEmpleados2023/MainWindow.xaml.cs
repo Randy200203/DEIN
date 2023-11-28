@@ -35,7 +35,9 @@ namespace GestionEmpleados2023
 
         private void Button_Agregar(object sender, RoutedEventArgs e)
         {
-
+            AgregarEmpleado AbrirVentanaAgregar = new AgregarEmpleado();
+            this.Close();
+            AbrirVentanaAgregar.Show();
         }
 
         private void Button_Buscar(object sender, RoutedEventArgs e)
