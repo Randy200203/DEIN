@@ -18,11 +18,29 @@ namespace GestionEmpleados2023
     /// <summary>
     /// Lógica de interacción para MainWindow.xaml
     /// </summary>
+    
     public partial class MainWindow : Window
     {
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Button_Lista(object sender, RoutedEventArgs e)
+        {
+            ListaEmpleados AbrirVentanaLista = new ListaEmpleados();
+            this.Close();
+            AbrirVentanaLista.Show();
+        }
+
+        private void Button_Agregar(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Buscar(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
