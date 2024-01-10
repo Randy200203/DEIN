@@ -1,0 +1,82 @@
+﻿<Window x:Class="Formulario_Usabilidad.Sent"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Formulario_Usabilidad"
+        mc:Ignorable="d"
+        Title="Sent" Height="800" Width="800">
+    <Border CornerRadius="20">
+        <Border CornerRadius="10" BorderThickness="5" Opacity="0.95">
+            <Border.BorderBrush>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.BorderBrush>
+
+            <Border.Background>
+                <LinearGradientBrush StartPoint="0,2" EndPoint="1,0">
+                    <GradientStop Color="#87CEEB" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="157*"/>
+                    <ColumnDefinition Width="120*"/>
+                    <ColumnDefinition Width="37*"/>
+                    <ColumnDefinition Width="157*"/>
+                    <ColumnDefinition Width="157*"/>
+                    <ColumnDefinition Width="157*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Image Grid.Row="0" Grid.Column="4" Source="Images/company.jpg" Grid.ColumnSpan="2" Margin="156.6,0,0,107.8" Grid.RowSpan="2">
+                    <Image.Clip>
+                        <EllipseGeometry Center="50,50" RadiusX="50" RadiusY="50" />
+                    </Image.Clip>
+                </Image>
+
+                <TextBlock Grid.Row="2" Grid.RowSpan="3" Grid.ColumnSpan="6"
+                           Text="Form submitted successfully.
+                           Thank you!"
+                           TextAlignment="Center"
+                           FontSize="40"
+                           TextWrapping="Wrap" Margin="0,0.2,0,108.2">
+
+                </TextBlock>
+
+                <Image Grid.Row="3" Grid.Column="1" Source="Images/sent.png" Grid.ColumnSpan="4" 
+                       Margin="54.2,0.4,33.2,0.2" Grid.RowSpan="2" >
+
+                </Image>
+
+                <Button Grid.Row="6" Grid.Column="5" 
+                    HorizontalAlignment="Center" VerticalAlignment="Center" 
+                    FontSize="24" 
+                    Foreground="White" FontWeight="SemiBold"
+                    Content="Log Out" Cursor="Hand" Click="logOut_Button" Margin="28.8,38,28,37.8">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Background="Red" 
+                    BorderBrush="{TemplateBinding BorderBrush}" 
+                    BorderThickness="{TemplateBinding BorderThickness}" 
+                    CornerRadius="10" Width="100">
+                                <ContentPresenter HorizontalAlignment="Center" 
+                                  VerticalAlignment="Center" />
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
+        </Border>
+
+    </Border>
+</Window>
